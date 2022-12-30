@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Layout = ({children}) => {
+const Layout = ({children, className}) => {
   return (
-    <div>
+    <div className={`w-full min-h-screen bg-blue72 ${className}`}>
         {children}
     </div>
   )

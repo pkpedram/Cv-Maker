@@ -2,19 +2,20 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { connect } from 'react-redux'
 import LoginPage from './views/login'
+import HomePage from './views/home'
 const CostumeRouter = ({isLogin}) => {
 
   let routes = [
     {
       path: '/',
-      element: <></>
+      element:  <HomePage />
     }
   ]
 
   return (
     <BrowserRouter>
     {
-      !isLogin ? <LoginPage /> :
+   
       <Routes>
         {
           routes.map((item) => <Route path={item.path} element={item.element} />)
